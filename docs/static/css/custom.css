@@ -1,0 +1,36 @@
+/*
+ * Styles personnalisés — chargés après le thème (cf. CUSTOM_CSS dans
+ * pelicanconf.py).
+ */
+
+/*
+ * Bloc « Clinique » de l'accueil : rouge clair, plus visible que le gris
+ * « panel-default », tout en conservant le style des autres blocs (en-tête
+ * coloré, texte foncé).
+ */
+.panel-clinique {
+  border-color: #ebccd1;
+}
+
+.panel-clinique > .panel-heading {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.panel-clinique > .panel-footer {
+  background-color: #f9e7e7;
+  border-color: #ebccd1;
+}
+
+/*
+ * Barre latérale supprimée (HIDE_SIDEBAR) : le thème passe la colonne de
+ * contenu en « col-lg-12 », classe qui ne s'applique qu'au-dessus de 1200px.
+ * En dessous, la colonne perd le rembourrage de la grille Bootstrap et le
+ * contenu déborderait de 15px de chaque côté par rapport à l'en-tête et au
+ * pied de page. On rétablit ce rembourrage.
+ */
+.container > .row > .col-lg-12 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
